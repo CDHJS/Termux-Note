@@ -3,9 +3,11 @@ debootstrap --arch=amd64 bionic rootfs http://archive.ubuntu.com/ubuntu/
 
 完全搞不懂怎么用，反正就上面两行就能出现rootfs了
 
+或许用这个会更方便些
+https://partner-images.canonical.com/core/bionic/current/
+
 
 用谷歌翻译帮助页面
-
 $ debootstrap --help
 用法：debootstrap [OPTION] ... <suite> <target> [<mirror> [<script>]]
 将Debian基本系统引导到目标目录。
