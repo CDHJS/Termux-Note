@@ -11,4 +11,6 @@ passwd
 
 ssh 192.168.1.* -p 2022
 yes
-******
+
+cp /sdcard/
+进入内部sd卡
