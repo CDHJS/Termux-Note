@@ -1,0 +1,10 @@
+pkg up -y && pkg in wget vim openssh dnsutils p7zip -y
+
+vim usr/etc/ssh/sshd_config
+Port 2022
+
+passwd
+******
+******
+
+一个我常用的termux环境就完成了
