@@ -1,0 +1,54 @@
+
+debootstrap --arch=arm64 bionic rootfs http://ports.ubuntu.com/
+debootstrap --arch=amd64 bionic rootfs http://archive.ubuntu.com/ubuntu/
+
+完全搞不懂怎么用，反正就上面两行就能出现rootfs了
+
+
+用谷歌翻译帮助页面
+
+$ debootstrap --help
+用法：debootstrap [OPTION] ... <suite> <target> [<mirror> [<script>]]
+将Debian基本系统引导到目标目录。
+
+      --help显示此帮助并退出
+      --version显示版本信息并退出
+      --verbose不要关闭wget的输出
+
+      -仅下载软件包，但不执行安装
+      --print-debs打印要安装的软件包，然后退出
+
+      --arch = A设置要安装的体系结构（如果没有dpkg，则使用）
+                               [--arch = powerpc]
+
+      --include = A，B，C将指定名称添加到基本软件包列表中
+      --exclude = A，B，C从列表中删除指定的软件包
+      --extra-suites = A，B，C也使用列出的套件中的软件包
+                             封存
+      --components = A，B，C使用列出的组件中的软件包
+                             封存
+      --variant = X使用引导脚本的变体X
+                             （当前支持的变体：buildd，fakechroot，
+                              最小库）
+      --no-merged-usr不会将/ {bin，sbin，lib} /符号链接到/ usr /
+      --keyring = K检查针对密钥环K释放文件
+      --no-check-gpg避免检查发布文件签名
+      --force-check-gpg强制检查释放文件签名
+                             （如果发生这种情况，还会禁用自动回退到HTTPS
+                             缺少钥匙圈），否则中止
+      --no-resolve-deps不会尝试自动解决依赖关系
+      --log-extra-deps在debootstrap.log中记录额外的依赖项信息
+      --cache-dir = DIR使用指定目录作为程序包缓存目录
+
+      --unpack-tarball = T从tar而不是http获取.deb
+      --make-tarball = T下载.debs并创建一个压缩的tarball
+      --second-stage-target = DIR
+                             在子目录而不是根目录中运行第二阶段
+                               （可用于创建外部chroot）
+                               （需要-第二阶段）
+      --extractor = TYPE覆盖自动.deb提取器选择
+                               （支持：dpkg-deb ar）
+      --debian-installer由debian-installer用于内部目的
+      --private-key =文件从文件中读取私钥
+      --certificate = file使用存储在文件（PEM）中的客户端证书
+      --no-check-certificate不针对证书颁发机构检查证书
