@@ -7,6 +7,8 @@ passwd
 ******
 ******
 
+cd $HOME&& mkdir .termux>/dev/null 2>&1; echo “extra-keys = [['/','..','~','-','=','UP','ENTER'],['ESC','TAB','CTRL','ALT','LEFT','DOWN','RIGHT']]”>.termux/termux.properties;termux-reload-settings
+
 一个我常用的termux环境就完成了
 
 ssh 192.168.1.* -p 2022
