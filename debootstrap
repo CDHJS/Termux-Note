@@ -1,6 +1,4 @@
-
 debootstrap --arch=arm64 bionic rootfs http://ports.ubuntu.com/
-
 debootstrap --arch=amd64 bionic rootfs http://archive.ubuntu.com/ubuntu/
 
 完全搞不懂怎么用，反正就上面两行就能出现rootfs了
