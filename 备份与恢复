@@ -1,0 +1,11 @@
+无意中发现/system/bin里面的软件是可以用的
+所以只需要unset LD_PRELOAD
+备份时只需要
+cd /data/data/com.termux
+tar cf files.tar.gz files
+
+恢复时只需要
+cd /data/data/com.termux
+rm -rf files (这时退出termux重新进入后会自动安装基础文件)
+unset LD_PRELOAD
+tar xf files.tar.gz
